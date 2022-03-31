@@ -1,0 +1,11 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('ylink-stocks') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">
+    <img src="{% static 'commande/images/logo.png' %}" alt="{{ site_title|default:_('ylink-stocks') }}">
+</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
